@@ -1,5 +1,6 @@
 # 使用命令说明
-   > i386-elf-gcc -O2 -S code.c -m32 -fno-omit-frame-pointer
+   > i386-elf-gcc -O2 -S code.c -m32 -fno-omit-frame-pointer\
+   > echo "#include <stdio.h>" | gcc -v -xc -
 
 ## 程序运行栈的基本操作
    1. x86-32的程序栈

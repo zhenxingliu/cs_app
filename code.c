@@ -74,3 +74,33 @@ long switch_eg(long x,long y,long z)
     }
     return w;
 }
+
+/*递归调用，查看寄存器的使用惯例 */
+int rfact(int x)
+{
+    int rval;
+    if(x<=1)
+        return 1;
+    rval = rfact(x-1);
+    return rval * x;
+}
+
+long sum1 = 0;
+void swap_ele_su(long a[],int i)
+{
+    swap(&a[i],&a[i+1]);
+    sum1 += a[i];
+}
+
+typedef int zip_dig[5];
+zip_dig cmu = {1,5,2,1,3};
+zip_dig mit = {0,2,1,3,9};
+zip_dig ucb = {9,4,7,2,0};
+
+void zinrc(zip_dig z){
+    int i;
+    for(i=0;i<5;i++)
+    {
+        z[i]++;
+    }
+}
